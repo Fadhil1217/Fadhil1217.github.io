@@ -25,7 +25,7 @@ section::before {
   height: 30vw;
   /* background: #d8761a; */
   background-image: url('9.jpg');
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   border: 5vw solid #d8761a;
   /* border: 5vw solid #ff1062; */
