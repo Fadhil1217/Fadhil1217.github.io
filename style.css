@@ -24,6 +24,9 @@ section::before {
   width: 30vw;
   height: 30vw;
   /* background: #d8761a; */
+  background-image: url('9.jpg');
+  background-size: contain;
+  background-position: center;
   border: 5vw solid #d8761a;
   /* border: 5vw solid #ff1062; */
   border-radius: 50%;
