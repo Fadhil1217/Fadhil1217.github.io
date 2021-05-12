@@ -1,108 +1,100 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-  font-family: 'Poppins', sans-serif;
+. {
+	margin: 0;
+	padding: 0;
+	font-family: 'poppins', sans-serif;
 }
 
 body {
-  overflow: hidden;
+	background: #333 url(idul.jpg);
+	background-attachment: fixed;
+	background-blend-mode: hard-light;
+	background-position: top;
+	background-size: cover;
 }
 
-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #111, #222, #111);
+.container {
+	position: absolute;
+	top: 80px;
+	left: 100px;
+	right: 100px;
+	bottom: 80px;
+	background: url(idul.jpg);
+	background-attachment: fixed;
+	background-position: top;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5),
+		0 0 0 100px rgba(0, 0, 0, .1);
 }
 
-section::before {
-  content: '';
-  position: absolute;
-  width: 30vw;
-  height: 30vw;
-  /* background: #d8761a; */
-  background-image: url('9.jpg');
-  background-size: contain;
-  background-position: center;
-  border: 5vw solid #d8761a;
-  /* border: 5vw solid #ff1062; */
-  border-radius: 50%;
-  box-shadow: 0 0 0 1vw #222,
-    0 0 0 1.3vw #fff;
+.container h3 {
+	text-align: center;
+	font-size: 8em;
+	line-height: 0.7em;
+	color: white;
+	margin-top: -80px;
+	margin-block-start: unset;
+	margin-block-end: unset;
 }
 
-h2 {
-  position: absolute;
-  font-size: 9vw;
-  color: #fff;
-  text-align: center;
-  line-height: 2em;
-  z-index: 10;
-  transform: skewY(-7deg);
-  text-shadow: 1px 1px 0 #ccc,
-    2px 2px 0 #ccc,
-    3px 3px 0 #ccc,
-    4px 4px 0 #ccc,
-    5px 5px 0 #ccc,
-    10px 10px 0 rgba(0, 0, 0, 0.2);
-  animation: floating 5s ease-in-out infinite;
+.container p {
+	display: block;
+	font-weight: bold;
+	color: white;
+	background: rgb(0 50 43);
+	text-align: center;
+	letter-spacing: 6px;
+	font-size: 2em;
+	box-shadow: 0 10px 10px -5px #cecde2bf;
 }
 
-@keyframes floating {
-
-  0%,
-  100% {
-    transform: skewY(-7deg) translate(0, -20px);
-  }
-
-  50% {
-    transform: skewY(-7deg) translate(0, 20px);
-  }
+.countdown {
+	display: flex;
+	margin-top: 50px;
 }
 
-h2 span {
-  font-weight: 700;
-  font-size: 3em;
-  text-shadow: 1px 1px 0 #ccc,
-    2px 2px 0 #ccc,
-    3px 3px 0 #ccc,
-    4px 4px 0 #ccc,
-    5px 5px 0 #ccc,
-    6px 6px 0 #ccc,
-    7px 7px 0 #ccc,
-    8px 8px 0 #ccc,
-    9px 9px 0 #ccc,
-    20px 20px 0 rgba(0, 0, 0, 0.2);
+.countdown div {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	background: rgba(51, 51, 51, 0.712);
+	color: #fff;
+	margin: 0 15px;
+	font-size: 3em;
+	font-weight: 500;
 }
 
-section i {
-  position: absolute;
-  background: #fff;
-  border-radius: 50%;
-  box-shadow: 0 0 10px #fff,
-    0 0 20px #fff,
-    0 0 40px #fff,
-    0 0 80px #fff;
-  animation: animate linear infinite;
+.countdown div:before {
+	content: '';
+	position: absolute;
+	bottom: -30px;
+	left: 0px;
+	width: 100%;
+	height: 50px;
+	background: rgba(255, 255, 0, 0.692);
+	color: black;
+	font-size: 0.35em;
+	line-height: 35px;
+	font-weight: 300;
 }
 
-@keyframes animate {
-  0% {
-    opacity: 0;
-  }
+.countdown #day:before {
+	content: 'Day';
+}
 
-  10% {
-    opacity: 1;
-  }
+.countdown #hour:before {
+	content: 'Hours';
+}
 
-  90% {
-    opacity: 1;
-  }
+.countdown #minute:before {
+	content: 'Minutes';
+}
 
-  100% {
-    opacity: 0;
-  }
+.countdown #second:before {
+	content: 'Seconds';
 }

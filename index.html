@@ -1,41 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+	<title>Ead Mubarak</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
-<section>
-  <h2>Happy New Year<br><span>2021</span></h2>
-  <!-- <span style="font-size: 65px; top: 400px;">Nur Fadhil Subari</span> -->
-</section>
-    <script type="text/javascript">
-        function stars(){
-          const count = 200;
-          const section = document.querySelector('section');
-          var i = 0;
 
-          while(i < count){
-            const star = document.createElement('i');
-            const x = Math.floor(Math.random() * window.innerWidth)
-            const y = Math.floor(Math.random() * window.innerHeight)
+	<div class="container">
+		<br>
+		<br>
+		<p>Saya Nur Fadhil Subari & Keluarga mengucapkan mohon maaf lahir dan batin</p>
+		<h3>1442M</h3>
+		<div class="countdown">
+			<div id="day">NA</div>
+			<div id="hour">NA</div>
+			<div id="minute">NA</div>
+			<div id="second">NA</div>
+		</div>
+	</div>
 
-            const size = Math.random() * 4;
-            star.style.left = x+'px';
-            star.style.top = y+'px';
-            star.style.width = size+'px';
-            star.style.height = size+'px';
-            const duration = Math.random() * 2;
-            star.style.animationDuration = 2+duration+'s';
-            star.style.animationDelay = duration+'s';
 
-            section.appendChild(star); 
-            i++
-          }
-        }
-        stars();
-    </script>
+
+	<script type="text/javascript">
+		var countDate = new Date('May 13, 2021 06:30:00').getTime();
+
+		function newYear() {
+			var now = new Date().getTime();
+			gap = countDate - now;
+
+			var second = 1000;
+			var minute = second * 60;
+			var hour = minute * 60;
+			var day = hour * 24;
+
+			var d = Math.floor(gap / (day));
+			var h = Math.floor(gap % (day) / (hour));
+			var m = Math.floor(gap % (hour) / (minute));
+			var s = Math.floor(gap % (minute) / (second));
+
+			var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober',
+				'November', 'Desember'
+			];
+
+			var myDays = ['Mgu', 'Snn', 'Sls', 'Rbu', 'Kms', 'Jmt', 'Sbt'];
+
+			var date = new Date();
+
+			var day = date.getDate();
+
+
+			var thisDay = date.getDay(),
+
+				thisDay = myDays[thisDay];
+
+			var d2 = new Date().getDate();
+			var h2 = new Date().getHours();
+			var m2 = new Date().getMinutes();
+			var s2 = new Date().getSeconds();
+
+			if (now > countDate) {
+				document.getElementById('day').innerText = thisDay;
+				document.getElementById('hour').innerText = h2;
+				document.getElementById('minute').innerText = m2;
+				document.getElementById('second').innerText = s2;
+			} else {
+				document.getElementById('day').innerText = d;
+				document.getElementById('hour').innerText = h;
+				document.getElementById('minute').innerText = m;
+				document.getElementById('second').innerText = s;
+			}
+		}
+		setInterval(function () {
+			newYear();
+		}, 1000)
+	</script>
+
 </body>
+
 </html>
