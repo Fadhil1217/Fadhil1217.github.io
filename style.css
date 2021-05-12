@@ -30,7 +30,6 @@ body {
 		0 0 0 100px rgba(0, 0, 0, .1);
 }
 
-<<<<<<< HEAD
 .container h3 {
 	text-align: center;
 	font-size: 8em;
@@ -39,22 +38,6 @@ body {
 	margin-top: -80px;
 	margin-block-start: unset;
 	margin-block-end: unset;
-=======
-section::before {
-  content: '';
-  position: absolute;
-  width: 30vw;
-  height: 30vw;
-  /* background: #d8761a; */
-  background-image: url('9.jpg');
-  background-size: cover;
-  background-position: center;
-  border: 5vw solid #d8761a;
-  /* border: 5vw solid #ff1062; */
-  border-radius: 50%;
-  box-shadow: 0 0 0 1vw #222,
-    0 0 0 1.3vw #fff;
->>>>>>> ef2333c515f43e8bed39cf41c7da0febf258c52d
 }
 
 .container p {
@@ -112,13 +95,6 @@ section::before {
 	content: 'Minutes';
 }
 
-<<<<<<< HEAD
 .countdown #second:before {
 	content: 'Seconds';
 }
-=======
-  100% {
-    opacity: 0;
-  }
-}
->>>>>>> ef2333c515f43e8bed39cf41c7da0febf258c52d
