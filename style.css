@@ -11,7 +11,7 @@ body {
   min-height: 100vh;
   background: #202020;
   overflow: hidden;
-  font-family: roboto;
+  
 }
 
 .container {
@@ -49,13 +49,13 @@ button {
 
 .block:nth-child(3n + 2) {
   background-color: #4444;
-  background-image: url('kita2.jpg');
+  background-image: url('kita3.jpg');
   background-position: center;
   background-size: cover;
 }
 
 .block:nth-child(3n + 3) {
-  background-color: #ff9312;
+  background-color: #ffe312;
   /* background-image: url('6.jpg');
   background-position: center;
   background-size: cover; */
